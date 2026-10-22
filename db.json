@@ -1,0 +1,49 @@
+{
+  "students": [
+    {
+      "name":"Ram Sharma",
+      "email":"ram123@gmail.com",
+      "number":"1234567890",
+      "examStatus":"pass",
+      "teacherID":"lXgJO1NNfBk"
+    },
+    {
+      "name":"Ramesh Sharma",
+      "email":"ramesh123@gmail.com",
+      "number":"1234567890",
+      "examStatus":"fail",
+      "teacherID":"lXgJO1NNfBk"
+    },
+    {
+      "name":"Harsh Sharma",
+      "email":"harsh123@gmail.com",
+      "number":"1234567890",
+      "examStatus":"fail",
+      "teacherID":"lXgJO1NNfBk"
+    },
+    {
+      "name":"Manoj Sharma",
+      "email":"manoj123@gmail.com",
+      "number":"1234567890",
+      "examStatus":"pass",
+      "teacherID":"0KQ-TsFMO_Y"
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Dev Mahendrasinh Mahida",
+      "email": "devmahida340@gmail.com",
+      "mNumber": "9313059290",
+      "password": "LiebeXDev@2005",
+      "id": "lXgJO1NNfBk"
+    },
+    {
+      "name": "Liebe",
+      "email": "Liebe123@gmail.com",
+      "mNumber": "1234567890",
+      "password": "Liebe@123#",
+      "id": "0KQ-TsFMO_Y"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
