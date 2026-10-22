@@ -1,6 +1,6 @@
 # StudyHard — Student Management System
 
-StudyHard is a React-based student management system for teachers. It provides a simple landing page, teacher registration and login flows, a protected dashboard, and a student list backed by a local JSON Server API.
+StudyHard is a React-based student management system for teachers. It provides a landing page, teacher registration and login flows, a dashboard, and teacher-specific student data backed by a local JSON Server API.
 
 ## Features
 
@@ -23,27 +23,15 @@ StudyHard is a React-based student management system for teachers. It provides a
 - Bootstrap 5
 - JSON Server
 
-## Requirements
-
-- Node.js 18 or newer
-- npm
-
 ## Getting started
 
-1. Clone the repository and enter the project directory:
-
-   ```bash
-   git clone <repository-url>
-   cd StudentManagementSystem
-   ```
-
-2. Install dependencies:
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-3. Start the JSON Server API in a separate terminal:
+2. Start the JSON Server API in a separate terminal:
 
    ```bash
    npm run server
@@ -51,13 +39,13 @@ StudyHard is a React-based student management system for teachers. It provides a
 
    The API runs at `http://localhost:3001` and uses [`db.json`](./db.json) as its data source.
 
-4. Start the Vite development server:
+3. Start the Vite development server:
 
    ```bash
    npm run dev
    ```
 
-5. Open the URL shown by Vite, usually `http://localhost:5173`.
+4. Open the URL shown by Vite, usually `http://localhost:5173`.
 
 The frontend expects the JSON Server API to be available on port `3001`. Start both processes during local development.
 
@@ -131,15 +119,5 @@ GET  http://localhost:3001/students?teacherID=<teacher-id>
 - Redux state is configured in [`src/store/store.js`](./src/store/store.js).
 - Teacher registration and login requests are implemented in [`src/reducers/teacher.slice.js`](./src/reducers/teacher.slice.js).
 - Student fetching is implemented in [`src/reducers/student.slice.js`](./src/reducers/student.slice.js).
-- The current student page fetches and stores the teacher's students; additional student CRUD controls can be added there as the project evolves.
+- The student page fetches and stores students associated with the logged-in teacher.
 - The current login state is held in memory and is cleared when the page is reloaded.
-
-## Production considerations
-
-Before deploying, replace the JSON Server backend with a production API and add:
-
-- Secure authentication and session management
-- Password hashing and credential validation on the server
-- Server-side authorization for teacher/student access
-- Environment-based API URL configuration
-- Form validation and user-facing request error states
